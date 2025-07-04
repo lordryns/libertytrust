@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device width,initial-scale=1.0">
+        <meta http-equiv="refresh" content="2000">
+        <meta property="og:title" content="LTGO sign in">
+        <meta property="og:image" content="20240712_154749.jpg" />
+        <meta property="og:description" content="At Liberty trust grant organization, we sepcialize in grant processing, dedicated in 
+        helping organizations, businesses, start ups and individuals navigate and benefit from the complex world of 
+        grants. Our mission is to empower entities to secure funding, achieve their goals and make a
+         meaningful impact in their communities">
+       <link rel="icon" type="image/x-icon" href="../20250703_1205323434.PNG">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <title>Liberty trust sign in</title>
+        <style>
+            body{
+               background-color: #f0effc;
+                margin:0;
+                padding:0;
+            }
+            
+            .nav{
+    width:100%;
+    position: fixed;
+    top:0;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: space-around;
+    background:rgba(0, 0, 0, 0.0);
+    align-items: center;
+    z-index:20000000;
+    transition:0.5s;
+}
+
+.bgnav a{
+    transition:0.5s;
+    color:black;
+}
+
+.bgnav{
+    transition:0.5s;
+    background-color:white;
+    color:black;
+    box-shadow:0 2px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.brand{
+    width:40%;
+    padding-top:5px;
+    padding-bottom:5px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+
+    .landing{
+        width:1100px;
+    }
+
+
+@media screen and (max-width:768px){
+    .brand{
+        width:210px;
+    }
+
+    .men{
+        position:absolute;
+        display:flex;
+        width:50%;
+        height:80vh;
+        padding-bottom:150px;
+        flex-direction: column;
+        right:0;
+        top:65px;
+        transform: translateX(100%);
+        transition:0.5s;
+        background-color:black;
+        
+    }
+
+    li a:hover{
+    border-bottom:none;
+}
+
+li{
+    transition:1s;
+}
+
+    li:hover{
+    border-bottom:2px solid #f6b10c;
+    transition-duration:1s;
+}
+
+    .menactive{
+        transform: translateX(0%);
+        transition:0.5s;
+    }
+    .x1{
+        margin:-2px;
+        transform: rotate(45deg);
+        transition:0.5s;
+    }
+
+    .x2{
+        margin:-2px;
+        transform: rotate(-45deg);
+        transition:0.5s;
+    }
+
+    .x3{
+opacity:0;
+        transition:0.5s;
+    }
+
+    .button{
+        display:block;
+    }
+
+    .bgx{
+     transition:0.5s;
+    background-color:black;
+}
+
+.bgnav a{
+    color:white;
+}
+
+    li{
+        text-align:center;
+        padding-top: 20px;
+        width:100%;
+    }
+
+    .li a{
+        color: white;
+    }
+}
+
+
+            .header{
+                color:black;
+                font-weight:bolder;
+                font-family:sans-serif;
+                text-align:center;
+                font-size:30px;
+                margin-top:10%;
+                margin-bottom:50px;
+                   margin-left:30%;
+                margin-right:30%;
+            }
+
+                      .panel-body{
+                margin-top:-20px;
+                padding:20px 0px 20px 0px;
+                background-color:white;
+                width:40%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                font-family:sans-serif;
+                margin-bottom:10%;
+            }
+
+            input:focus{
+                outline:none;
+            }
+
+            select:focus{
+                outline:none;
+            }
+
+            .form-group, .form-groups{
+                width:90%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                padding-top:30px;
+            }
+
+            .form-groups{
+                column-count:2;
+                column-gap:-100%;
+            }
+
+            .form-control{
+                padding-top:20px;
+                padding-bottom:20px;
+                width:100%;
+                font-size:17px;
+                border-top: 0px;
+                background-color:#ebebeb;
+                border-left:0px;
+                border-right:0px;
+                color:white;
+                border-bottom:1px solid black;
+            }
+
+            .gender, .radio-inline{
+                color:white;
+            }
+
+            .finale{
+                color:rgb(0, 153, 255);
+            }
+
+            #checkbox{
+                padding-top:10px;
+                padding-bottom:10px;   
+                font-size:15px;
+                border-top: 0px;
+                border-left:0px;
+                border-right:0px;
+                border-bottom:1px solid #363188;
+            }
+
+            label{
+                font-weight:bolder;
+            }
+
+            .submit{
+            font-size:20px;
+            margin-left:5%;
+            margin-right:5%;
+            padding-bottom:20px;
+            padding-top:20px;
+            width:90%;
+            border-radius:5px;
+            background-color: #0052cc;
+            color:white;
+            margin-top:20px;
+            }
+            
+            .baralot{
+                font-size:17px;
+                text-align:center;
+                color:white;
+                margin-right:10%;
+                margin-left:10%;
+            }
+            
+            .baralota{
+                font-size:10px;
+                text-align:center;
+                color:#053158;
+                font-family:Sans-Serif;
+                margin-right:10%;
+                margin-left:10%;
+            }
+
+            .baralota a{
+    color:#053158;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bolder;
+}
+
+.lastly{
+    text-align:center;
+    font-family:sans-serif;
+    margin-top:40px;
+    font-size:12px;
+}
+            
+            .lastly a{
+                color:#0052cc;
+                text-decoration:none;
+            }
+
+            @media screen and (max-width:1200px){
+                .panel-body{
+                    width:50%;
+                }
+            }
+
+            @media screen and (max-width:1000px){
+                .panel-body{
+                    width:80%;
+                }
+            }
+
+            @media screen and (max-width:800px){
+                .header{
+                    font-size:60px;
+                }
+                .panel-body{
+                    width:80%;
+                }
+            }
+
+            @media screen and (max-width:600px){
+                .header{
+                    margin-top:10%;
+                    font-size:30px;
+                     margin-left:10%;
+                margin-right:10%;
+                }
+                .panel-body{
+                    width:90%;
+                }
+
+                .lastly{
+    text-align:center;
+    font-family:sans-serif;
+    margin-top:40px;
+    font-size:15px;
+}
+            }
+        </style>
+    </head>
+    <body>
+    
+            <a href="../index.html"><img src="../20250703_12053234.png" class="brand" id="brand"></a>
+        
+        
+
+        <p class="header">WELCOME BACK TO  LIBERTY TRUST GRANT ORGANIZATION</p>
+
+        <div class="panel-body">
+<form action="" method="POST">
+
+<div class="form-group">
+    <input type="text" class="form-control" name="Name" id="Name" placeholder=" username or email" required>
+</div>
+
+
+
+<div class="form-group">
+<input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+</div>
+
+<div class="form-groups">
+    <input type="checkbox" id="checkbox"><p class="finale">Forgot password ?</p>
+    </div>
+    
+<a class="user/index.html"><input type="submit" class="submit" value="Login"></a>
+
+</form>
+
+<p class="lastly">Already have an account yet? <a href="signup.html">Register Now</a></p>
+        </div>
+        
+        
+        
+        
+        <p class="baralota">&copy; Liberty Trust Grant Organization 2025 | <span><a href="privacypolicy.html">PRIVACY POLICY</a></span></p></p>
+        
+        <script>
+
+            const menslide = () => {
+                const button = document.querySelector('.button');
+                const nav = document.querySelector('.men');
+                x1 = document.getElementById('x1');
+                x2 = document.getElementById('x2');
+                x3 = document.getElementById('x3');
+            
+                button.addEventListener('click', () => {
+                    nav.classList.toggle('menactive');
+                    x1.classList.toggle('x1')
+                    x2.classList.toggle('x2')
+                    x3.classList.toggle('x3')
+                });
+            }
+            
+            menslide();
+            
+            </script>
+            
+            <script>
+            
+            function change(){
+                var scrollvalue = window.scrollY;
+                var navbar = document.getElementById('nav');
+                var brand = document.getElementById('brand')
+                var x1 = document.querySelector('.line1');
+                var x2 = document.querySelector('.line2');
+                var x3 = document.querySelector('.line3');
+                
+            
+            
+            
+                if (scrollvalue < 200){
+                navbar.classList.remove('bgnav');
+                x1.classList.remove('bgx');
+                x2.classList.remove('bgx');
+                x3.classList.remove('bgx');
+                }
+            
+                else{
+                    navbar.classList.add('bgnav');
+                    x1.classList.add('bgx');
+                    x2.classList.add('bgx');
+                    x3.classList.add('bgx');
+                }
+            
+                console.log(scrollvalue);
+            }
+                window.addEventListener('scroll', change);
+            
+            </script>
+            
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+                </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+       
+    </body>
+   </html>
