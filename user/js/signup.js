@@ -12,48 +12,45 @@ const notyf = new Notyf();
 
 const alertDiv = document.getElementById("alert-div");
 
-document.getElementById("signup-form").addEventListener("submit", (e) => {
-	e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    
+  document.getElementById("signup-form").addEventListener("submit", (e) => {
+    e.preventDefault();
 
 
-	let firstname = document.getElementById("firstname").value;
-	let lastname = document.getElementById("lastname").value;
-	let username = document.getElementById("username").value;
-	let phoneno = document.getElementById("phoneno").value;
-	let email = document.getElementById("email").value;
-	let password = document.getElementById("password").value;
-	let confirmPassword = document.getElementById("confirm-password").value;
-	let checkbox = document.getElementById("checkbox");
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let username = document.getElementById("username").value;
+    let phoneno = document.getElementById("phoneno").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirm-password").value;
+    let checkbox = document.getElementById("checkbox");
 
 
-//  notyf.success(`${firstname} - ${lastname} -  ${username} -  ${email} - ${phoneno} -  ${password}`)
-	
-  var submitBtn = document.querySelector(".submit");
+  //  notyf.success(`${firstname} - ${lastname} -  ${username} -  ${email} - ${phoneno} -  ${password}`)
+    
+    var submitBtn = document.querySelector(".submit");
 
-  submitBtn.innerHTML = "Processing...";
-	if (password === confirmPassword) {
-    const promise = account.create(username, email, password, firstname + " " + lastname) 
-    promise.then(
-      res => {
-        notyf.success("Account created successfully!");
-        submitBtn.innerHTML = "Register";
+    submitBtn.innerHTML = "Processing...";
+    if (password === confirmPassword) {
+      const promise = account.create(username, email, password, firstname + " " + lastname) 
+      promise.then(
+        res => {
+          notyf.success("Account created successfully!");
+          submitBtn.innerHTML = "Register";
+        }
+      ).catch(err => {
+          console.log(err);
+          notyf.error("An error occured! We were unable to create an account for you, please try again. " + err);
+          submitBtn.innerHTML = "Register";
+        })
+    } else {
+      notyf.error("Passwords don't match!");
+    }
+    
 
-       try {
-          const result = await account.createEmailPasswordSession(email, password);
-          location.replace("/dashboard/index.html") 
-        } catch (error) {
-          notyf.error("Failed to log in, please try to do this manually!")
-        } 
-      }
-    ).catch(err => {
-        console.log(err);
-        notyf.error("An error occured! We were unable to create an account for you, please try again. " + err);
-        submitBtn.innerHTML = "Register";
-      })
-  } else {
-    notyf.error("Passwords don't match!");
-  }
-	
+  })
 
 })
 
