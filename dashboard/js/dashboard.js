@@ -1,25 +1,32 @@
-const appwrite_url = "https://fra.cloud.appwrite.io/v1"
-const project_id = "686815220031b86fa074"
+const appwrite_url = "https://fra.cloud.appwrite.io/v1";
+const project_id = "686815220031b86fa074";
+const database_id = "686969bc000e208d6e74";
+const collection_id = "686969c800398b500084";
 
 const client = new Appwrite.Client()
-                                    .setEndpoint(appwrite_url)
-                                    .setProject(project_id)
+  .setEndpoint(appwrite_url)
+  .setProject(project_id);
 
-
-const account = new Appwrite.Account(client)
-
+const databases = new Appwrite.Databases(client);
 const notyf = new Notyf();
 
+function redirectUnregistered() {
+  const userId = localStorage.getItem("id");
 
-function redirectUnregistered(){
-  account.get()
-   .then(res => {
-    document.getElementById("headername").innerHTML = res.name; 
-    notyf.success("Welcome!");
-   }).catch(err => {
-    console.log(err)
+  if (!userId) {
     location.replace("../../user");
-   })
+    return;
+  }
+
+  databases.getDocument(database_id, collection_id, userId)
+    .then((doc) => {
+      document.getElementById("headername").innerText = doc.firstname || "User";
+      notyf.success("Welcome back!");
+    })
+    .catch((err) => {
+      console.error("User not found or error occurred:", err);
+      location.replace("../../user");
+    });
 }
 
 redirectUnregistered();

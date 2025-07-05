@@ -1,19 +1,635 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-  </head>
- <!-- Toast Library! Do not tamper with this cdn! -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width,initial-scale=1.0">
+        <meta http-equiv="refresh" content="2000">
+        <meta name="description" content="At Liberty trust grant organization, we sepcialize in grant processing, dedicated in 
+        helping organizations, businesses, start ups and individuals navigate and benefit from the complex world of 
+        grants. Our mission is to empower entities to secure funding, achieve their goals and make a
+         meaningful impact in their communities ">
+
+        <meta name="author" content="LTGO">
+
+        <meta name="keyword" content="trust grant, SBA, grant, Fedetral government grant, business resolution,Liberty trust grant organization
+        union grant organisation, small business administration, black business, Liberty trust grant organization, NGO">
+        <link rel="icon" type="image/x-icon" href="../../20250703_1205323434.PNG">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5544659172677407"
+        crossorigin="anonymous"></script>
+
+
+
 <link href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <title>LIBERTY USER</title>
+<style>
+
+*{
+    user-select:none;
+}
+
+body{
+    margin:0;
+    overflow-x: hidden;
+    background-color: #f0effc;
+}
+
+#preloader{
+    background:black url('load-35.gif') no-repeat center;
+    background-size:30%;
+    height:100vh;
+    width:100%;
+    top:0;
+    position:fixed;
+    z-index:5000000000;
+}
+
+.nav{
+    width:100%;
+    position: fixed;
+    top:0;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: space-around;
+    background:rgba(0, 0, 0, 0.0);
+    align-items: center;
+    z-index:20000000;
+    transition:0.5s;
+}
+
+.bgnav a{
+    transition:0.5s;
+    color:black;
+}
+
+.bgnav{
+    transition:0.5s;
+    background-color:white;
+    color:black;
+    box-shadow:0 2px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.brand{
+    width:210px;
+    padding-top:5px;
+    padding-bottom:5px;
+    
+}
 
 
-  <body>
-    <h1>Hello, <span id="headername">User</span></h1>
-  </body>
+.men{
+    list-style:none;
+    display: flex;
+    justify-content: space-around;
+    width:20%;
+}
 
-  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.0"></script>
-  <script src="js/dashboard.js"></script>
+li{
+    float:left;
+    font-size:13px;
+}
+
+li a{
+    text-decoration:none;
+    color:black;
+    transition:0.5s;
+}
+
+li a:hover{
+   animation-duration:2s;
+   animation-iteration-count: infinite;
+    transition-duration:0.5s;
+    animation-name:navhov;
+}
+
+@keyframes navhov{
+    from{border-bottom:2px solid #053158;}
+    to{border-bottom:2px solid #0071d4;}
+}
+.button{
+    display:none;
+}
+
+
+.line1, .line2, .line3{
+    width:20px;
+    height:2px;
+    background-color: black;
+    margin:5px;
+    transition:0.5s;
+}
+
+.bgx{
+     transition:0.5s;
+    background-color:black;
+}
+
+
+.button:hover .line1{
+    animation-name:line1;
+    animation-duration:2s;
+}
+
+.button:hover .line2{
+    animation-name:line2;
+    animation-duration:2s;
+}
+
+.button:hover .line3{
+    animation-name:line3;
+    animation-duration:8s;
+}
+
+@keyframes line1{
+    0%{margin-right:0px;}
+    50%{margin-right:25px;}
+    100%{margin-right:0px;}
+}
+
+@keyframes line2{
+    0%{margin-left:0px;
+    background-color:#650167;
+}
+    50%{margin-left:25px;}
+    100%{margin-left:0px;
+        background-color:#21710b;
+    }
+}
+
+@keyframes line3{
+    0%{margin-right:0px;}
+    50%{margin-right:1px;}
+    100%{margin-right:0px;}
+}
+
+@media screen and (max-width:1000px){
+    .men{
+        width:60%;
+    }
+
+    li{
+        padding:5px;
+    }
+
+    
+
+    .landing{
+        width:1100px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .brand{
+        width:210px;
+    }
+
+    .men{
+        position:absolute;
+        display:flex;
+        width:100%;
+        height:80vh;
+        padding-bottom:150px;
+        flex-direction: column;
+        right:0;
+        color: black;
+        top:65px;
+        transform: translateX(100%);
+        transition:0.5s;
+        background-color:white;
+        
+    }
+
+    li a:hover{
+    border-bottom:none;
+}
+
+li{
+    transition:1s;
+    color: black;
+}
+
+    li:hover{
+    border-bottom:2px solid #f6b10c;
+    transition-duration:1s;
+}
+
+    .menactive{
+        transform: translateX(0%);
+        transition:0.5s;
+    }
+    .x1{
+        margin:-2px;
+        transform: rotate(45deg);
+        transition:0.5s;
+    }
+
+    .x2{
+        margin:-2px;
+        transform: rotate(-45deg);
+        transition:0.5s;
+    }
+
+    .x3{
+opacity:0;
+        transition:0.5s;
+    }
+
+    .button{
+        display:block;
+    }
+
+    .bgx{
+     transition:0.5s;
+    background-color:black;
+}
+
+.bgnav a{
+    color:black;
+}
+
+    li{
+        text-align:center;
+        padding-top: 20px;
+        width:100%;
+        color: black;
+    }
+
+    li a{
+        color: black;
+    }
+}
+
+.body{
+    width:70%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5%;
+}
+
+.bodyy{
+    width:70%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15%;
+     margin-top:5%;
+    text-align:center;
+}
+
+.hello{
+    font-size:13px;
+    margin-top:15%;
+    color:black;
+    font-family:sans-serif;
+}
+
+.balances{
+    width:100%;
+    border-radius:15px;
+    background-color: #053158;
+}
+
+.balances > div{
+    width:90%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.available{
+    font-size:15px;
+    font-family:sans-serif;
+    padding-top:40px;
+    color:white;
+}
+
+.mainbalance{
+     font-size:60px;
+    font-family:sans-serif;
+    font-weight:900;
+     padding-bottom:40px;
+    margin-top:-15px;
+    color:white;
+}
+
+.bankers{
+    column-count:2;
+    width:100%;
+    margin-top:-30px;
+}
+
+.bankers > div{
+     width:100%;
+    border-radius:15px;
+    background-color: #053158;
+    padding-bottom:10px;
+    padding-top:40px;
+    text-align:center;
+}
+
+.bankers > div > i{
+    color:white;
+    font-size:40px;
+}
+
+.bankers > div > p{
+    color:white;
+    font-size:30px;
+    font-family:sans-serif;
+    font-weight:bolder;
+     margin-top:3%;
+}
+
+.ggrant{
+    font-family:sans-serif;
+    font-weight:900;
+    text-decoration:center;
+    width:100%;
+     padding-top:20px;
+    padding-bottom:20px;
+    border-radius:15px;
+    background-color:#053158;
+}
+
+.ggrant a{
+    color:white;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    padding-left:30%;
+    padding-right:30%;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:#053158;
+}
+
+.transac{
+    font-weight:bold;
+    color:#313131;
+    font-size:30px;
+    text-align:left;
+    margin-top:10%;
+    font-family:serif;
+    padding-bottom:10px;
+    border-bottom:2px solid #053158;
+}
+
+.classless{
+    background-color: #021b31;
+     padding-bottom:70px;
+     margin-top:-15px;
+    text-align:center;
+}
+
+.classa, .classb, .classc{
+    font-family:sans-serif;
+    text-align:center;
+    margin-left:10%;
+    margin-right:10%;
+    color:white;
+    font-weight:600;
+}
+
+.classa{
+    padding-top:70px;
+    font-size:14px;
+}
+
+.classb{
+    font-size:60px;
+    margin-top:-1px;
+}
+
+.classc{
+    color: #053158;
+    background-color:white;
+    display:inline-block;
+    padding:15px;
+     margin-top:-10px;
+}
+
+@media screen and (max-width:650px){
+  .classb{
+    font-size:40px;
+    margin-top:-1px;
+}
+
+.hello{
+    margin-top:40%;
+}
+
+.body{
+    width:90%;
+}
+
+.bodyy{
+    width:90%;
+    margin-bottom:50%;
+}
+
+.available{
+    font-size:13px;
+}
+
+.mainbalance{
+     font-size:40px;
+}
+
+.bankers{
+    column-count:2;
+    width:100%;
+    margin-top:0px;
+}
+
+.bankers > div{
+    padding-bottom:20px;
+    padding-top:40px;
+}
+
+.bankers > div > i{
+    font-size:25px;
+}
+
+.bankers > div > p{
+    font-size:18px;
+    font-weight:bolder;
+    margin-top:10%;
+}
+
+.transac{
+    margin-top:20%;
+    font-size:20px;
+}
+}
+
+.footer{
+    background-color: #053158;
+    color:white;
+    font-family:sans-serif;
+    margin-top:-1%;
+    padding-top:1.5%;
+    padding-bottom:1.5%;
+}
+
+
+.footer > p{
+    font-weight:lighter;
+    text-align:right;
+    font-size:12px;
+}
+
+.footer a{
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bolder;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="nav" id="nav">
+
+    <a href="index.html"><img src="../../20250703_12053234.png" class="brand" id="brand"></a>
+
+<ul class="men">
+
+    <li class="menu" id="menu"><a href="index.html">Home</a></li>
+     <li class="menu" id="menu"><a href="userapplication.html">Application</a></li>
+    <li class="menu" id="menu7"><a href="../../index.html">Log out</a></li>
+
+</ul>
+
+<div class="button">
+
+    <div id="x1" class="line1"></div>
+    <div id="x2" class="line2"></div>
+    <div id="x3" class="line3"></div>
+    
+</div>
+
+ </div>
+
+
+<div class="body">
+<p class="hello">Hello, <span id="headername"></span></p>
+
+<div class="balances">
+    <div>
+    <p class="available">Available balance</p>
+    <p class="mainbalance">$200,000.00</p>
+    </div>
+</div>
+
+
+<div class="bankers">
+    <div><i class="bi bi-bank2"></i>
+        <p>Connect Bank</p>
+    </div>
+
+     <div><i class="bi bi-cash-coin"></i></i>
+        <p>Withraw</p>
+    </div>
+    </div>
+
+</div>
+
+<hr>
+
+<div class="bodyy">
+    <p class="ggrant"><a href="application.html">Get grant</a></p>
+    <p class="transac">Transaction history</p>
+</div>
+
+<div class="classless">
+    <p class="classa">GIVE US A HAND</p>
+    <p class="classb">Support us and change the course of a child’s life today!</p>
+    <p class="classc">Donate</p>
+</div>
+
+
+
+
+<div class="footer">
+            <p>&copy;2025 LTGO - ALL RIGHT RESERVED | <span><a href="privacypolicy.html">PRIVACY POLICY</a></span></p>
+            
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="js/dashboard.js"></script>
+
+
+    <script>
+
+const menslide = () => {
+    const button = document.querySelector('.button');
+    const nav = document.querySelector('.men');
+    x1 = document.getElementById('x1');
+    x2 = document.getElementById('x2');
+    x3 = document.getElementById('x3');
+
+    button.addEventListener('click', () => {
+        nav.classList.toggle('menactive');
+        x1.classList.toggle('x1')
+        x2.classList.toggle('x2')
+        x3.classList.toggle('x3')
+    });
+}
+
+menslide();
+
+</script>
+
+<script>
+
+function change(){
+    var scrollvalue = window.scrollY;
+    var navbar = document.getElementById('nav');
+    var brand = document.getElementById('brand')
+    var x1 = document.querySelector('.line1');
+    var x2 = document.querySelector('.line2');
+    var x3 = document.querySelector('.line3');
+    
+
+
+
+    if (scrollvalue < 200){
+    navbar.classList.remove('bgnav');
+    x1.classList.remove('bgx');
+    x2.classList.remove('bgx');
+    x3.classList.remove('bgx');
+    }
+
+    else{
+        navbar.classList.add('bgnav');
+        x1.classList.add('bgx');
+        x2.classList.add('bgx');
+        x3.classList.add('bgx');
+    }
+
+    console.log(scrollvalue);
+}
+    window.addEventListener('scroll', change);
+
+</script>
+
+
+
+
+
+
+</body>
 </html>
