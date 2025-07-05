@@ -309,6 +309,8 @@ opacity:0;
 }
             }
         </style>
+            <!-- Toast Library! Do not tamper with this cdn! -->
+<link href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" rel="stylesheet">
     </head>
     <body>
     
@@ -319,10 +321,10 @@ opacity:0;
         <p class="header">WELCOME BACK TO  LIBERTY TRUST GRANT ORGANIZATION</p>
 
         <div class="panel-body">
-<form action="" method="POST">
+<form id="login-form">
 
 <div class="form-group">
-    <input type="text" class="form-control" name="Name" id="Name" placeholder=" username or email" required>
+    <input type="text" class="form-control" name="Name" id="email" placeholder="email" required>
 </div>
 
 
@@ -332,10 +334,11 @@ opacity:0;
 </div>
 
 <div class="form-groups">
-    <input type="checkbox" id="checkbox"><p class="finale">Forgot password ?</p>
+    <input type="checkbox" id="checkbox"><p class="finale" required>Forgot password ?</p>
     </div>
     
-<a class="user/index.html"><input type="submit" class="submit" value="Login"></a>
+<button type="submit" class="submit">Login</button>
+
 
 </form>
 
@@ -347,6 +350,9 @@ opacity:0;
         
         <p class="baralota">&copy; Liberty Trust Grant Organization 2025 | <span><a href="privacypolicy.html">PRIVACY POLICY</a></span></p></p>
         
+        <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="js/login.js"></script>
         <script>
 
             const menslide = () => {

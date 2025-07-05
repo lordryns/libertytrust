@@ -11,17 +11,15 @@ const account = new Appwrite.Account(client)
 const notyf = new Notyf();
 
 
-async function redirectUnregistered(){
-  try {
-   let user = await account.get() 
-   notify.success("Welcome!");
-   document.getElementById("headername").innerHTML = user.name;
-    console.log(JSON.stringify(user))
-  } catch (error) {
-    console.log(error);
-    location.replace("/../../user/index.html")
-  }
-
+function redirectUnregistered(){
+  account.get()
+   .then(res => {
+    document.getElementById("headername").innerHTML = res.name; 
+    notyf.success("Welcome!");
+   }).catch(err => {
+    console.log(err)
+    location.replace("../../user");
+   })
 }
 
 redirectUnregistered();

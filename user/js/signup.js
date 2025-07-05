@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
           const createSessionPromise = account.createEmailPasswordSession(email, password)
-                                                    .then(res => {})
+                                                    .then(res => {
+                                                      location.replace("../../dashboard");
+                                                    })
                                                     .catch(err => {
                                                       notyf.error("We are unable to log you, please do so manually or try again later.")
                                                     });
