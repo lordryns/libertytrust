@@ -24,7 +24,7 @@ document.getElementById("signup-form").addEventListener("submit", (e) => {
 	let checkbox = document.getElementById("checkbox");
 
 	if (checkbox.checked) {
-		alertDiv.innerHTML = customAlert(message, "success")
+		alertDiv.innerHTML = customAlert("Signup successful!", "success")
 	}
 
 })
