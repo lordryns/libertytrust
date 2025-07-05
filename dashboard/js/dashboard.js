@@ -21,6 +21,7 @@ function redirectUnregistered() {
   databases.getDocument(database_id, collection_id, userId)
     .then((doc) => {
       document.getElementById("headername").innerText = doc.firstname || "User";
+      document.getElementById("balance").innerText = doc.balance || 0.00;
       notyf.success("Welcome back!");
     })
     .catch((err) => {
