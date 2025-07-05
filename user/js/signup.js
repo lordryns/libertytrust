@@ -13,8 +13,8 @@ const notyf = new Notyf();
 const alertDiv = document.getElementById("alert-div");
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-  document.getElementById("signup-form").addEventListener("submit", (e) => {
+
+  document.getElementById("signup-form").addEventListener("submit",  (e) => {
     e.preventDefault();
 
 
@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
         res => {
           notyf.success("Account created successfully!");
           submitBtn.innerHTML = "Register";
+
+      
+          const createSessionPromise = account.createEmailPasswordSession(email, password)
+                                                    .then(res => {})
+                                                    .catch(err => {
+                                                      notyf.error("We are unable to log you, please do so manually or try again later.")
+                                                    });
+
         }
       ).catch(err => {
           console.log(err);

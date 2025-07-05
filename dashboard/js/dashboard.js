@@ -10,10 +10,18 @@ const account = new Appwrite.Account(client)
 
 const notyf = new Notyf();
 
-try {
- let user = await account.get() 
-  console.log(JSON.stringify(user))
-} catch (error) {
-  location.replace("/../../index.html")
+
+async function redirectUnregistered(){
+  try {
+   let user = await account.get() 
+   notify.success("Welcome!");
+   document.getElementById("headername").innerHTML = user.name;
+    console.log(JSON.stringify(user))
+  } catch (error) {
+    console.log(error);
+    location.replace("/../../user/index.html")
+  }
+
 }
 
+redirectUnregistered();
