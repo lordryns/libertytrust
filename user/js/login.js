@@ -33,7 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (res.documents.length > 0) {
         const userDoc = res.documents[0];
+        let lockState = isUserLockedOut(userDoc.$updatedAt)
+
+ 
+        if (userDoc.balance > 0) {
+          if (lockState.locked) {
+            notyf.error(lockState.message);
+            submitBtn.innerHTML = "Login";
+            return
+          }
+        }
         localStorage.setItem("id", userDoc.$id);
+       // alert(JSON.stringify(userDoc));
         notyf.success("Login successful!");
         location.replace("../../dashboard");
       } else {
@@ -47,3 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+function isUserLockedOut(updatedAt, lockoutHours = 5) {
+  const updatedTime = new Date(updatedAt);
+  const now = new Date();
+  const diffInMs = now - updatedTime;
+  const diffInHours = diffInMs / (1000 * 60 * 60);
+
+  if (diffInHours < lockoutHours) {
+    const unlockTime = new Date(updatedTime.getTime() + lockoutHours * 60 * 60 * 1000);
+    return {
+      locked: true,
+      message: `Your application is currently being processed, come back at  ${unlockTime.toLocaleTimeString()}`,
+      unlockTime
+    };
+  }
+
+  return { locked: false };
+}
