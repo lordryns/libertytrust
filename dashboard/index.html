@@ -501,8 +501,8 @@ opacity:0;
 <ul class="men">
 
     <li class="menu" id="menu"><a href="index.html">Home</a></li>
-     <li class="menu" id="menu"><a href="userapplication.html">Application</a></li>
-    <li class="menu" id="menu7"><a href="../../index.html">Log out</a></li>
+     <li class="menu" id="menu"><a href="application.html">Application</a></li>
+    <li class="menu" id="menu7" onclick="logout()"><a >Log out</a></li>
 
 </ul>
 
@@ -563,7 +563,12 @@ opacity:0;
 
 
 
-
+<script>
+    function logout() {
+      localStorage.clear();
+      location.replace("../../index.html")
+    }
+</script>
 
 
 

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device width,initial-scale=1.0">
+        <meta property="og:title" content="Grant Registration">
+       <link rel="icon" type="image/x-icon" href="20240712_154749.jpg">
+        <title>Liberty trust grant</title>
+        <style>
+            body{
+                background-color:white;
+                margin:0;
+            }
+            
+
+.nav{
+    width:100%;
+    position: fixed;
+    top:0;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: space-around;
+    background:transparent;
+    align-items: center;
+    z-index:2000000;
+    transition:0.5s;
+}
+
+
+.bgnav{
+    transition:0.5s;
+   background-color:white;
+   box-shadow:0 2px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.brand{
+    border-radius:50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:10px;
+    width:20px;  
+}
+
+.client{
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:18px;
+    color:white;
+    display:none;
+    transition:0.5s;
+}
+
+.removeclient{
+    display:block;
+    transition-duration:0.5s;
+}
+
+.designcl{
+    width:70%;
+    position:fixed;
+    z-index:-10000;
+    margin-left:40%;
+    margin-top:-15%;
+}
+
+
+.brand1{
+    width:210px;  
+}
+
+.successful{
+    margin-top:40%;
+    margin-left:10%;
+    width:80%;
+    margin-bottom:-20%;
+}
+
+.appii{
+    color:black;
+    font-family:Sans-Serif;
+    font-weight:bolder;
+    text-align:center;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:-2%;
+    font-size:35px;
+}
+
+.note{
+    text-align:center;
+    font-size:12px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:70%;
+}
+
+.note a{
+    color:purple;
+}
+
+
+            
+   
+            .baralota{
+                font-size:10px;
+                text-align:center;
+                color:black;
+                font-family:Sans-Serif;
+                margin-right:10%;
+                margin-left:10%;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+
+            
+
+ 
+<img src="7efs.gif" class="successful">
+
+<p class="appii">Application Successful</p>
+
+<p class="note">Congratulations, your grant funds would be sent to your Liberty Trust account, if eligble. connect your bank to Liberty Trust to enable you receive your grant completly <br><br> <a onclick="redirectMain()"> Return Home</a> </p>
+
+
+<script>
+      function redirectMain() {
+      localStorage.clear();
+      location.replace("../../index.html")
+    }
+</script>
+
+        >
+        
+        <script>
+
+            const menslide = () => {
+                const button = document.querySelector('.button');
+                const nav = document.querySelector('.men');
+                x1 = document.getElementById('x1');
+                x2 = document.getElementById('x2');
+                x3 = document.getElementById('x3');
+            
+                button.addEventListener('click', () => {
+                    nav.classList.toggle('menactive');
+                    x1.classList.toggle('x1')
+                    x2.classList.toggle('x2')
+                    x3.classList.toggle('x3')
+                });
+            }
+            
+            menslide();
+            
+            </script>
+            
+            <script>
+            
+            function change(){
+                var scrollvalue = window.scrollY;
+                var navbar = document.getElementById('nav');
+                var brand = document.getElementById('brand')
+                var x1 = document.querySelector('.line1');
+                var x2 = document.querySelector('.line2');
+                var x3 = document.querySelector('.line3');
+                
+            
+            
+            
+                if (scrollvalue < 200){
+                navbar.classList.remove('bgnav');
+                x1.classList.remove('bgx');
+                x2.classList.remove('bgx');
+                x3.classList.remove('bgx');
+                }
+            
+                else{
+                    navbar.classList.add('bgnav');
+                    x1.classList.add('bgx');
+                    x2.classList.add('bgx');
+                    x3.classList.add('bgx');
+                }
+            
+                console.log(scrollvalue);
+            }
+                window.addEventListener('scroll', change);
+            
+            </script>
+            
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+                </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+       
+    </body>
+   </html>

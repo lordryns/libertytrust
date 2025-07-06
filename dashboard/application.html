@@ -11,7 +11,13 @@
          meaningful impact in their communities">
        <link rel="icon" type="image/x-icon" href="../../20250703_1205323434.PNG">
         <title>Liberty trust application</title>
-        <style>
+    
+    <!-- Toast Library! Do not tamper with this cdn! -->
+<link href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" rel="stylesheet">
+
+    
+
+    <style>
             body{
                background-color: #f0effc;
                 margin:0;
@@ -297,22 +303,22 @@ opacity:0;
         <p class="header">Grant Application Form</p>
 
         <div class="panel-body">
-<form action="" method="POST">
+<form id="application-form">
 
 <div class="form-group">
-    <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required>
+    <input type="text" class="form-control" name="Name" id="name" placeholder="name" required>
 </div>
 
 <div class="form-group">
     <label for="Dateofbirth" class="gender">Date of Birth</label><br>
-    <input type="date" name="Date" class="form-control" id="Date" required>
+    <input type="date" name="Date" class="form-control" id="date" required>
 </div>
 
 <div class="form-group">
     <label for="gender" class="gender">Gender</label><br>
-    <label for="male" class="radio-inline"><input type="radio" id="male" name="Gender" value="m">Male</label>
-    <label for="female" class="radio-inline"><input type="radio" id="female" name="Gender" value="f">Female</label>
-    <label for="others" class="radio-inline"><input type="radio" id="others" name="Gender" value="o">Others</label>
+    <label for="male" class="radio-inline"><input type="radio" id="gender" name="Gender" value="m">Male</label>
+    <label for="female" class="radio-inline"><input type="radio" id="gender" name="Gender" value="f">Female</label>
+    <label for="others" class="radio-inline"><input type="radio" id="gender" name="Gender" value="o">Others</label>
 </div>
 
 
@@ -321,7 +327,7 @@ opacity:0;
 </div>
 
 <div class="form-group">
-    <input type="text" class="form-control" name="Phone number" id="number" placeholder="Phone no" required>
+    <input type="text" class="form-control" name="Phone number" id="phoneno" placeholder="Phone no" required>
 </div>
 
 <div class="form-group">
@@ -369,7 +375,7 @@ opacity:0;
 </div>
 
 <div class="form-group">
-<input type="text" class="form-control" id="Purpose" name="purpose" placeholder="Purpose of Application" required>
+<input type="text" class="form-control" id="purpose" name="purpose" placeholder="Purpose of Application" required>
 </div>
 
 <div class="form-group">
@@ -383,7 +389,7 @@ opacity:0;
     <input type="checkbox" id="checkbox" required><p class="finale">I agree to proceed with the application</p>
     </div>
     
-<a class="user/index.html"><input type="submit" class="submit" value="Submit"></a>
+<button type="submit" class="submit">Submit</button>
 
 </form>
         </div>
@@ -393,6 +399,12 @@ opacity:0;
         
         <p class="baralota">&copy; Liberty Trust Grant Organization 2025 | <span><a href="privacypolicy.html">PRIVACY POLICY</a></span></p></p>
         
+
+        <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="js/application.js"></script>
+
+
         <script>
 
             const menslide = () => {
