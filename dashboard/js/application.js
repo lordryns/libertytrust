@@ -37,8 +37,11 @@ Purpose: ${purpose}
 Referrals: ${referrals}`;
 
     notyf.success("Processing request...");
-    await sendMail("Grant Application", "rynstheoverlord@gmail.com", message);
-    
+   try {
+      await sendMail("Grant Application", "support@libertytrustgrant.xyz", message);
+    } catch (error) {
+      
+    } 
 let userId = localStorage.getItem("id");
 
 if (userId) {
@@ -67,7 +70,7 @@ if (userId) {
   // redirectUnregistered();
 });
 
-function sendMail(title, "support@libertytrustgrant.xyz", message) {
+function sendMail(title, email, message) {
   const url = `https://mailmanapi.vercel.app/send?title=${encodeURIComponent(title)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
 
   return fetch(url)
