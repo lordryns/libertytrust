@@ -1,7 +1,7 @@
 const appwrite_url = "https://fra.cloud.appwrite.io/v1";
-const project_id = "686815220031b86fa074";
-const database_id = "686969bc000e208d6e74";
-const collection_id = "686969c800398b500084";
+const project_id = "68b790860035ee5cedf6";
+const database_id = "68b793dd000abf26b17e";
+const collection_id = "users";
 
 const client = new Appwrite.Client()
   .setEndpoint(appwrite_url)
